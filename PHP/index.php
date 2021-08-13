@@ -1,12 +1,8 @@
 <?php
-  class UberX extends Car {
-    public $brand;
-    public $model;
+require_once("car.php");
+require_once("UberX.php");
+require_once("account.php");
 
-    public function __construct($license, $driver, $brand, $model){
-      parent::__construct($license, $driver);
-      $this->license = $license;
-      $this->driver = $driver;
-    }
-  }
+$uberX = new UberX("QUGA132", new Account("Anahi Quintero", "ABCE123"), "chevrolet", "Spark");
+$uberX->printDataCar();
 ?>
